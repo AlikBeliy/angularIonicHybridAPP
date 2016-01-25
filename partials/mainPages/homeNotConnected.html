@@ -1,0 +1,41 @@
+<ion-view view-title="MonkeyVPN" class="content-background-color" hide-back-button="true">
+    <ion-nav-title>
+        <div class="title page-title" >
+            <div class="title text-center monkey-vpn-title">monkey<b>vpn</b><span class="tm-symbol light-grey-text">&trade;<span></div>
+        </div>
+    </ion-nav-title>
+    <ion-nav-buttons side="left">
+        <button class="button button-icon ion-help-circled" style="color: #33cd5f" ng-click="goToHelp()"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-icon ion-ios-gear" style="color: #33cd5f" ng-click="goToSettings()"></button>
+    </ion-nav-buttons>
+    <ion-content class="padding content-background-color height-100" has-bouncing="false" scroll="false">
+            <div class="mapLocBox border-grey-rounded">
+                <div map-lazy-load="http://maps.google.com/maps/api/js" style="height:100%;position:relative">
+                    <ng-map center="{{currentCountry.geocode}}" zoom="9" disable-default-u-i="true" draggable="false" style="height:100%;" styles="[{'featureType':'landscape','stylers':[{'saturation':-100},{'lightness':65},{'visibility':'on'}]},{'featureType':'poi','stylers':[{'saturation':-100},{'lightness':51},{'visibility':'simplified'}]},{'featureType':'road.highway','stylers':[{'saturation':-100},{'visibility':'simplified'}]},{'featureType':'road.arterial','stylers':[{'saturation':-100},{'lightness':30},{'visibility':'on'}]},{'featureType':'road.local','stylers':[{'saturation':-100},{'lightness':40},{'visibility':'on'}]},{'featureType':'transit','stylers':[{'saturation':-100},{'visibility':'simplified'}]},{'featureType':'administrative.province','stylers':[{'visibility':'off'}]},{'featureType':'water','elementType':'labels','stylers':[{'visibility':'on'},{'lightness':-25},{'saturation':-100}]},{'featureType':'water','elementType':'geometry','stylers':[{'hue':'#ffff00'},{'lightness':-25},{'saturation':-97}]}]"></ng-map>
+                </div>
+                <div class="locationTxtBox">
+                    <div class="locationTop">{{currentCountry.location}}</div>
+                    <div class="localtionSub">{{currentCountry.country}}</div>
+                </div>
+            </div>
+        </ion-content>
+    <form ng-submit="connectVpn()">
+        <div class="disconnect-div bottom-button">
+            <div class="list border-grey-rounded" ng-click="openModal()">
+                <label class="item item-input item-select">
+                    <div class="input-label flag-icon flag-icon-{{currentCountry.country_iso | lowercase}}">
+                        <span class="" ng-class="(currentCountry.country_iso !='') ? 'input-country-text' : '' " >{{currentCountry.country_iso}} - {{currentCountry.location}}</span>
+                    </div>
+                    <!--<select ng-model="selectedHotspot" ng-options="hotspot.name for hotspot in hotspots"></select>-->
+                </label>
+            </div>
+            <button ng-click="connect()" class="button button-block monkey-button-balanced con-button">
+                <div class="connect-button-cont text-center">
+                    <span class="connect-text">Connect</span>
+                </div>
+            </button>
+        </div>
+    </form>
+</ion-view>

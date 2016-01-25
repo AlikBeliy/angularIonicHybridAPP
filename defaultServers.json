@@ -1,0 +1,42 @@
+[
+  {
+    "id": "2",
+    "name": "USA-Los Angeles-Crissic",
+    "allowfree": "0",
+    "geocode": "34.052234,-118.243685",
+    "country": "USA",
+    "country_iso": "US",
+    "location": "WEST Cluster (Los Angeles)",
+    "fqdn": "uswest.monkeyvpn.com"
+  },
+  {
+    "id": "8",
+    "name": "USA-East-Test",
+    "allowfree": "0",
+    "geocode": "30.332184,-81.655651",
+    "country": "USA",
+    "country_iso": "US",
+    "location": "EAST Cluster (Jacksonville)",
+    "fqdn": "useast.monkeyvpn.com"
+  },
+  {
+    "id": "38",
+    "name": "Switzerland",
+    "allowfree": "0",
+    "geocode": "47.3712763,8.5237209",
+    "country": "Switzerland",
+    "country_iso": "CH",
+    "location": "Zurich",
+    "fqdn": "ch.monkeyvpn.com"
+  },
+  {
+    "id": "41",
+    "name": "Austria",
+    "allowfree": "0",
+    "geocode": "48.2144377,16.353412",
+    "country": "Austria",
+    "country_iso": "AT",
+    "location": "Vienna",
+    "fqdn": "at.monkeyvpn.com"
+  }
+]

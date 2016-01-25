@@ -1,0 +1,15 @@
+<ion-modal-view class="country-popup-view">
+    <ion-content class="country-popup-cont" has-bouncing="false">
+        <label class="item item-radio" ng-repeat="server in servers" ng-click="closeModal(server)">
+            <input type="radio" name="group">
+            <div class="item-content">
+                <div class="flag-icon flag-icon-{{server.country_iso | lowercase}}">
+                </div>
+                <span class="list-country-text">
+                    {{server.country_iso}} - {{server.location}}
+                </span>
+            </div>
+            <i class="radio-icon ion-checkmark"></i>
+        </label>
+    </ion-content>
+</ion-modal-view>

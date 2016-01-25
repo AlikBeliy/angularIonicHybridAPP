@@ -1,0 +1,68 @@
+<ion-view view-title="MonkeyVPN Connected" class="content-background-color" hide-back-button="true">
+    <ion-nav-title>
+        <div class="title page-title" >
+            <div class="title text-center monkey-vpn-title">monkey<b>vpn</b><span class="tm-symbol light-grey-text">&trade;<span></div>
+        </div>
+    </ion-nav-title>
+    <ion-nav-buttons side="left">
+        <button class="button button-icon ion-help-circled" style="color: #33cd5f" ng-click="goToHelp()"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-icon ion-ios-gear" style="color: #33cd5f" ng-click="goToSettings()"></button>
+    </ion-nav-buttons>    
+    <ion-content class="padding height-100" has-bouncing="false" scroll="false">
+        <div class="img-responsive connection-logo-div container">
+            <div class="navi">
+                <div class="progressbar">
+                    <div class="col-offset-10 progress">
+                        <div class="pbaranim">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="infoi">
+                <img src="img/connection2.png" class="img-responsive connection-logo-image">
+            </div>
+        </div>
+        <div class="connectionCon border-grey-rounded">
+            <div class="connectInfo">
+                <div class="row"><div class="status-title">Status:&nbsp;Connected</div></div>
+                <div class="row"><div class="col-50">Your new IP:</div><div class="col-50" style="text-align: right;"><div class="flag-icon flag-icon-{{ipInfo.countryCode | lowercase}}"></div> {{ipInfo.ip}}</br>({{ipInfo.countryCode}} - {{ipInfo.city}})</div></div>
+               <!-- <div class="row"><div class="col-50">Protocol:</div><div class="col-50">PPTP</div></div>
+                <div class="row"><div class="col-50">NAT Firewall:</div><div class="col-50">Active</div></div> -->
+                <div class="mb-indicator-line mb-indicator-line-custom" style="width:{{totalTrafficPersent}}%">
+                    <span class="mb-indicator mb-indicator-green">
+                        {{totalTrafficUsed}}MB
+                        <img class="indicator-label" src="img/indicator-label-green.png">
+                    </span>
+                </div>
+                <div class="reach-limit-indicator">
+                    <div class="indicator-bg indicator-bg-green" style="width:{{totalTrafficPersent}}%">
+                        <!--only for bg-->
+                    </div>
+                </div>
+                <div class="indicator-text">
+                    <span class="">
+                        0MB
+                    </span>
+                    <span ng-hide="unlimited" class="pull-right">
+                        {{totalTraffic}}MB
+                    </span>
+                    <span ng-show="unlimited" class="pull-right">
+                        Unlimited
+                    </span>
+                </div>
+            </div>
+            <button ng-hide="unlimited" ng-click="getTraffic()" class="button button-block bold monkey-button-balanced">
+                Get more Traffic
+            </button>
+        </div>
+    </ion-content>
+    <div class="disconnect-div bottom-button">
+        <button ng-click="disconnect()" class="button button-block monkey-button-balanced monkey-red-bg con-button">
+            <div class="connect-button-cont text-center">   
+                <span class="connect-text disconnect-text">Disconnect</span>
+            </div>
+        </button>
+    </div>
+</ion-view>

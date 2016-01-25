@@ -1,0 +1,22 @@
+<ion-view view-title="MonkeyVPN" class="content-background-color" hide-back-button="true">
+    <ion-nav-title>
+        <div class="title page-title">
+            <div class="title text-center help-page-title">About</div>
+        </div>
+    </ion-nav-title>
+    <ion-nav-buttons side="left">
+        <button class="button button-icon  ion-android-arrow-back" style="color: #33cd5f" ng-click="goPrevPage()"></button>
+    </ion-nav-buttons>
+    <ion-content class="padding" has-bouncing="false">
+
+        <p>
+            monkeyVPN is a trade mark of Bymo Ltd.
+            <br/> © 2015 Bymo Ltd. All Rights Reserved.
+        </p>
+
+        <p ng-click="showDebugToggle()">App Version: {{appVersion}}</p>
+        <div ng-hide="showTheToggle" class="item item-divider">User Id: {{userid}}</div>
+        <ion-toggle ng-model="enableRemoteDebugging.checked" ng-checked="enableRemoteDebugging.checked" ng-hide="showTheToggle" ng-change="enableRemoteDebuggingChange()">Enable Remote Debugging</ion-toggle>
+
+    </ion-content>
+</ion-view>

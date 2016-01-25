@@ -1,0 +1,43 @@
+<ion-view view-title="MonkeyVPN" class="content-background-color" hide-back-button="true">
+    <ion-nav-title>
+        <div class="title page-title" >
+            <div class="title text-center monkey-vpn-title">monkey<b>vpn</b><span class="tm-symbol light-grey-text">&trade;<span></div>
+        </div>
+    </ion-nav-title>
+    <ion-nav-buttons side="right">
+        <button  class="button button-icon ion-android-close" style="color: #33cd5f" ng-click="goPrevPage()"></button>
+    </ion-nav-buttons>
+    <ion-content class="padding" has-bouncing="false">
+        <div class="loginCon input-center">
+            <img src="img/monkey.png" class="img-center">
+            <div class="topLabelText text-center">Login</div>
+            <form class="registration_form" name="loginForm" ng-submit="login(credentials)" novalidate>
+                <div class="list input-width input-center border-grey-rounded">
+                    <label class="item item-input button-rounded">
+                        <input required ng-model="credentials.email" name="email" type="text" placeholder="Username">
+                    </label>
+                </div>
+                <div class="list input-width input-center border-grey-rounded">
+                    <label class="item item-input button-rounded">
+                        <input required ng-model="credentials.password" name="password" type="password" placeholder="Password">
+                        <span class="error" ng-show="myForm.input.$error.required">Required!</span><br>
+                    </label>
+                </div>
+                <div class=" text-center" style="margin-top:9px">
+                    <input type="submit" class="button button-rounded monkey-button-balanced input-width"  value="Login">
+                </div>
+            </form>
+                <div class="list input-width input-center text-right" style="margin-top:0px !important;">
+                    <button ng-click="forgotPassword()" class="button button-clear forgot-password">Forgot&nbsp;Password?</button>
+                </div>
+            <div class="customHeightFooter">
+                <div class="list input-width input-center text-right" style="margin-top:0px !important;">
+                    <button ng-disabled="true" class="button button-clear need-account">Need an account?</button>
+                </div>
+                <div class="text-center">
+                    <button ng-click="goToSignup()" class="button button-color button-rounded input-width">Signup here</button>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,18 @@
+<ion-view view-title="Help" hide-back-button="true">
+    <ion-nav-title>
+        <div class="title page-title" >
+           <div class="title text-center help-page-title">Help & FAQ</div>
+        </div>
+    </ion-nav-title>
+    <ion-nav-buttons side="left">
+        <button  class="button button-icon ion-android-arrow-back" style="color: #33cd5f" ng-click="goPrevPage()"></button>
+    </ion-nav-buttons>
+    <ion-content class="padding" has-bouncing="false">
+        <div class="list no-border text-bold">
+            <a class="item item-icon-right" ng-click="openQuestion(question.id)" ng-repeat="question in questionsList">
+                {{question.ques}}
+                <i class="icon ion-ios-arrow-right monkey-list-arrow"></i>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,47 @@
+<ion-view view-title="MonkeyVPN Connected" class="content-background-color" hide-back-button="true">
+    <ion-nav-title>
+        <div class="title page-title" >
+            <div class="title text-center monkey-vpn-title">monkey<b>vpn</b><span class="tm-symbol light-grey-text">&trade;<span></div>
+        </div>
+    </ion-nav-title>
+    <ion-nav-buttons side="left">
+        <button class="button button-icon ion-help-circled" style="color: #33cd5f" ng-click="goToHelp()"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-icon ion-ios-gear" style="color: #33cd5f" ng-click="goToSettings()"></button>
+    </ion-nav-buttons>    
+    <ion-content class="padding height-100" has-bouncing="false" scroll="false">
+        <img src="img/sad-smile.png" class="sad-smile">
+        <div class="input-width">
+            <div class="reach-limit-text">
+                You have used up all your VPN traffic
+            </div>
+            <div class="mb-indicator-line">
+                <span class="mb-indicator">
+                    500MB
+                    <img class="indicator-label" src="img/indicator-label.png">
+                </span>
+            </div>
+            <div class="reach-limit-indicator">
+                <div class="indicator-bg">
+                    <!--only for bg-->
+                </div>
+            </div>
+            <div class="indicator-text">
+                <span class="">
+                    0MB
+                </span>
+                <span class="pull-right">
+                    500MB
+                </span>
+            </div>
+        </div>
+    </ion-content>
+    <div class="disconnect-div bottom-button">
+        <button ng-click="getTraffic()" class="button button-block monkey-button-balanced con-button">
+            <div class="connect-button-cont text-center">   
+                <span class="disconnect-text">Get More Traffic</span>
+            </div>
+        </button>
+    </div>
+</ion-view>

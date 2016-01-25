@@ -1,0 +1,656 @@
+/* Empty. Add your own CSS if you like */
+@font-face {
+    font-family: Lato Light;
+    src: url('../fonts/Lato-Light.ttf');
+}
+@font-face {
+    font-family: Lato Bold;
+    src: url('../fonts/Lato-Bold.ttf');
+}
+@font-face {
+    font-family: Lato Regular;
+    src: url('../fonts/Lato-Regular.ttf');
+}
+body {
+    font-family: Lato Regular;
+    color: #1f1f1f;
+}
+.mapLocBox {
+    position:relative;
+    display: block;
+    /* need to make better default pic */
+    /* background : url(../img/map.jpg) no-repeat; */
+    background-size: cover;
+    height: 68%;
+    width: 85%;
+    margin: auto;
+    margin-top: 6%;
+    overflow: hidden;
+}
+.border-grey-rounded{
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border: 3px solid #D7DDE0;
+}
+.mapBox{
+    display: inline-block;
+    position: relative;
+    height: 255px;
+    width: 100%;
+}
+.col-offset-5 {
+    margin-left: 5%;
+}
+.pull-right{
+    float:right;
+}
+.height-100 .scroll{
+    height:100%;
+}
+.bottom-button{
+    position: absolute;
+    bottom:0px;
+}
+.bold{
+    font-family: Lato Bold !important;
+}
+.disconnect-div {
+    width: 100%;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.con-button{
+    height: 55px !important;
+    font-family: Lato Bold !important;
+    font-size: 18px !important;
+}
+.bottom-button button {
+    margin:0px auto !important;
+}
+.nav-bar-block .button-icon{
+    color:#2DCC70 !important;
+    padding:0px !important;
+}
+
+/* workaround for android 4.4.x showing icons in header not perfectly vertical center */
+.nav-bar-block .bar .button.button-icon .icon:before, .bar .button.button-icon:before, .bar .button.button-icon.icon-left:before, .bar .button.button-icon.icon-right:before {
+	line-height:33px;
+}
+
+
+.list{
+    padding: 1px;
+}
+
+.locationTxtBox{
+    position: absolute;
+    bottom:0px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    color: white;
+    padding:10px 0px 10px 10px;;
+    background-color: rgba(0,0,0,1);
+    font-family: Lato Light;
+    border-radius: 0px 0px 3px 3px;
+    -moz-border-radius: 0px 0px 3px 3px;
+    -webkit-border-radius: 0px 0px 3px 3px;
+}
+
+.locationTop{
+    font-size: 15px;
+    position: relative;
+}
+
+.localtionSub{
+    font-size: 9px;
+}
+
+
+.btmSignupCon{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+.customHeightFooter{
+    height: 85px;
+}
+
+.smallRightLabel{
+    float: right;
+    font-size: smaller;
+    margin-bottom: 7px;
+    margin-top: -10px;
+}
+
+.topLabelText{
+    padding: 20px 0;
+    font-weight: bold;
+}
+.tm-symbol {
+    font-size:13px;
+    font-family: Lato Light;
+
+}
+.labelText{
+    padding: 10px 0px 10px 0px;
+    color: #8c8c8c;
+    font-size: 13px;
+}
+.content-background-color{
+    background-color: #F6F6F6 !important;
+}
+.img-center{
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    max-width: 21%;
+    padding: 15px 0px 0px 0px;
+}
+
+.button-rounded {
+    border-radius: 5px 5px 5px 5px !important;
+    -moz-border-radius: 5px 5px 5px 5px !important;
+    -webkit-border-radius: 5px 5px 5px 5px  !important;
+    /*border: 0px solid #000000;*/
+}
+.input-center{
+    margin: 9px auto 0px auto;
+}
+
+.button-width{
+    width: 60%;
+    max-width: 400px;
+    padding: 1px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.soc-button-width{
+    width: 100%;
+    max-width: 400px;
+    padding: 1px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.input-width{
+    width: 80%;
+    max-width: 360px;
+    padding: 1px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button-color{
+    background-color: #d7d7d7;
+    color: #505050;
+    border: none;
+    font-family: Lato Bold;
+}
+
+.monkey-bar-header{
+    border-bottom:1px solid #ddd;
+}
+
+.monkey-button-balanced, .monkey-button-balanced:hover  {
+    background-color:#2DCC70 !important;
+    border-radius: 5px;
+    border: none;
+    color: #ECFFF6;
+    font-family: Lato Regular;
+    font-size: 16px;
+    line-height: 37px;
+}
+
+.monkey-button-positive, .monkey-button-positive:hover  {
+    background-color:#4962A3;
+    border-radius: 5px;
+    border: none;
+    color: #F6FCFF;
+    font-family: Lato Regular;
+    font-size: 16px;
+    line-height: 37px;
+    padding: 0px 17px 0px 16px;
+}
+
+.monkey-button-google, .monkey-button-google:hover  {
+    background-color: rgb(72, 138, 234);
+    border-radius: 5px;
+    border: none;
+    color: #F6FCFF;
+    font-family: Lato Regular;
+    font-size: 16px;
+    line-height: 37px;
+    padding: 0px 22px 0px 11px;
+}
+.button.icon-left:before {
+    float: none !important;
+    padding-right: 10px !important;
+    padding-left: 0px !important;
+}
+.monkey-link {
+    /*color: #1f1f1f;*/
+    text-decoration:underline;
+    font-family: Lato Bold;
+    padding:20px 0px 20px 0px;
+
+}
+.page-title {
+    font-size: 25px;
+    text-align: center;
+    font-family: Lato Light;
+    padding:20px 0px 15px 0px;
+}
+
+.light-grey-text {
+    color: #8f8f8f;
+}
+
+.earn-text {
+    font-family: Lato Regular;
+    font-size: 15px;
+    padding:10px 0px 15px 0px;
+}
+
+.text-center{
+    text-align:center !important;
+}
+
+.help-page-title{
+    font-family: Lato Light;
+    font-size: 22px !important;
+    color: black !important;
+}
+
+.no-border * {    /*no border to all childs*/
+    border:none;
+    outline:none;
+}
+
+.text-bold{
+    font-family: Lato Bold;
+}
+
+.monkey-list-arrow{
+    font-size: 25px !important;
+    color: #787878;
+}
+
+.monkey-button-dark{
+    background-color: #565656;
+    border:none;
+    color: #fff;
+}
+.logout-label-text {
+ color:#aaa;
+}
+
+.bar-positive{
+    background-color: #fff !important;
+    color: #000 !important;
+    border-bottom: 1px solid #E1E1E1 !important;
+}
+.list label.item {
+    border:none;
+    height: 40px;
+    padding: 6px 0 6px 16px;
+}
+.list label.item input {
+    line-height: 14px;
+}
+
+.connect-text{
+    padding: 0px 0px 0px 23px;
+    background: url(../img/connect.png) no-repeat;
+    background-size: 17px 17px;
+    background-position: 0px 2px;
+    font-size: 18px;
+}
+.disconnect-text{
+    background-image: url(../img/disconnect.png) no-repeat;
+}
+.connection-logo-div {
+    max-width:300px;
+    display: block;
+    margin: 40px auto 50px auto;
+}
+
+.connection-logo-image {
+    width:100%;
+    max-width:300px;
+    display: block;
+}
+
+.connectionCon {
+    width:100%;
+    padding:10px 30px 10px 30px;
+    max-width: 300px;
+    margin:auto;
+    background-color: #ffffff;
+}
+.monkey-red-bg {
+    background-color: #CD2E2D !important;
+    border-color: #CD2E2D;
+}
+
+.connectInfo {
+    font-size:13px;
+    font-family: Lato Regular;
+    padding-top: 5px;
+}
+
+.status-title{
+    font-size: 22px;
+    padding: 0px 0px 15px 0px;
+    font-family: Lato Light;
+}
+
+.skip-label {
+    position: absolute;
+    bottom:1px;
+    right:3px;
+    font-size: 14px;
+    color: #8c8c8c !important;
+}
+
+.topLabelText{
+    font-size: 23px;
+    font-family: Lato Light;
+    padding: 25px 0px 15px 0px;
+    font-weight: lighter;
+}
+
+.monkey-input::-webkit-input-placeholder{
+    color:#979797;
+    font-size:15px;
+    font-family: Lato Regular;
+}
+
+.signup-now{
+    margin: 10px 0px 5px 0px;
+    padding: 0px 0px 2px 0px;
+}
+
+.already-have {
+    color: black;
+    font-size: smaller;
+    font-weight: bolder;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.forgot-password{
+    font-size: 14px;
+    text-decoration: underline;
+    font-family: Lato Bold;
+    color:#1f1f1f !important;
+    height:49px;
+    max-height:49px;
+    padding:2px;
+}
+
+.need-account{
+    font-size: 12px;
+    font-family: Lato Bold;
+    color:#1f1f1f !important;
+    height:49px;
+    max-height:49px;
+    padding:2px;
+    opacity: 1 !important;
+    margin-bottom:-9px;
+}
+
+.monkey-vpn-title{
+    font-family: Lato Regular;
+    color: black !important;
+}
+
+.signup-confirm-text{
+    font-size: 12px;
+    font-family: Lato Regular;
+    text-align: center;
+    margin: 15px 0px;
+    line-height: 17px;
+}
+.sad-smile{
+    display:block;
+    opacity: 0.3;
+    width: 65%;
+    max-height:300px;
+    max-width: 300px;
+    margin: 30% auto 5% auto;
+}
+.reach-limit-text {
+    font-size: 14px;
+    font-family: Lato Light;
+    padding: 10px 0px 10px 0px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.reach-limit-indicator{
+    width: 100%;
+    height: 17px;
+    overflow: hidden;
+    margin: 0px auto 3px auto;
+    border: 2px solid #3C3C3C;
+    padding: 2px;
+    border-radius: 7px 7px 7px 7px !important;
+    -moz-border-radius: 7px 7px 7px 7px !important;
+    -webkit-border-radius: 7px 7px 7px 7px  !important;
+}
+
+.indicator-bg{
+    height: 100%;
+    width:100%;
+    background: url(../img/traffic-indicator.png);
+    background-size: contain;
+}
+.indicator-bg-green{
+    width:24%;
+    background: url(../img/traffic-indicator-green.png) !important;
+    background-size: contain !important;
+}
+.indicator-text{
+    font-size: 12px;
+    color: #8C8C8C;
+    font-family: Lato Bold;
+}
+.mb-indicator-line {
+    width:100%;
+    height: 22px;
+    margin:10px 0px 0px 0px;
+}
+.mb-indicator-line-custom{
+    width:24%;
+}
+.mb-indicator{
+    color: rgb(255, 255, 255);
+    font-family: Lato Bold;
+    font-size: 9px;
+    padding: 0px 3px;
+    position: relative;
+    float: right;
+    background: #cd2e2e;
+    left: 23px;
+    line-height: 19px;
+    width: 44px;
+    text-align: center;
+    border-radius: 2px 2px 2px 2px !important;
+    -moz-border-radius: 2px 2px 2px 2px !important;
+    -webkit-border-radius: 2px 2px 2px 2px  !important;
+}
+.mb-indicator-green{
+    background: #2dcc70;
+}
+.indicator-label{
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    margin-left: -6px;
+    display: block;
+    width: 12px;
+}
+
+.country-popup-view{
+    height: 40%;
+    bottom: 0px;
+    top: inherit;
+    min-height: inherit;
+    border-top: 1px solid #E1E1E1;
+}
+.modal-backdrop-bg{
+    background: black;
+    opacity:0.3;
+}
+.question-page-content{
+    padding: 20px 10px;
+
+}
+
+.question-page-ques{
+    font-size: 20px;
+    font-family: Lato Light;
+    text-align: center;
+}
+
+.question-page-ans{
+    font-size: 16px;
+    padding: 20px 0px;
+    font-family: Lato Regular;
+}
+
+.flag-icon{
+    margin-left: -2px;
+}
+
+.input-country-text{
+    padding: 0px 0px 0px 25px;
+}
+
+.list-country-text{
+    padding: 0px 0px 0px 10px;
+}
+.alertPopup .popup{
+    border-radius: 10px 10px 10px 10px !important;
+    -moz-border-radius: 10px 10px 10px 10px !important;
+    -webkit-border-radius: 10px 10px 10px 10px  !important;
+    background-color: white;
+}
+.alertPopup .popup, .alertPopup .popup-title{
+    font-family: Lato Regular !important;
+    font-size: medium;
+}
+.alertPopup .popup-title{
+    font-size: large;
+}
+.alertPopup .popup-body{
+    overflow: auto;
+}
+.alertPopup input{
+    border: 1px solid #E8E8E8;
+    border-radius: 3px;
+    height: 45px;
+    margin-top: 12px;
+    padding: 10px;
+}
+.alertPopup .button, .alertPopup .button:hover, .alertPopup .button.button-positive {
+    background-color: #d7d7d7;
+    color: #505050;
+    border: none;
+    font-family: Lato Bold;
+}
+input[disabled] {
+    background-color:inherit !important;
+}
+
+
+.progressbar {
+
+    width: 100%;
+    height: 15px;
+    margin: .6em 0;
+    clear: both;
+}
+
+.progress {
+    margin-top: 47px;
+    background: #51b96c; /*-- Color of the bar --*/
+    height: 15px;
+    width: 0%;
+    max-width: 100%;
+    float: left;
+    -webkit-animation: progress 1s 1 forwards;
+    -webkit-animation-timing-function:step-start;
+    -moz-animation: progress 2s 1 forwards;
+    -ms-animation: progress 2s 1 forwards;
+    animation: progress 0s 1 forwards;
+}
+
+.pbaranim {
+    height: 15px;
+    width: 100%;
+    overflow: hidden;
+    background: url('../img/progresbar.gif') repeat-x;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=25);
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=25);
+    filter: alpha(opacity=25);
+}
+
+@-webkit-keyframes progress { 
+    from { }
+
+    to { width: 70% }
+}
+
+@-moz-keyframes progress { 
+    from { }
+
+    to { width: 70% }
+}
+
+@-ms-keyframes progress { 
+    from { }
+
+    to { width: 70% }
+}
+
+@keyframes progress { 
+    from { }
+
+    to { width: 70% }
+}
+
+.container {
+  width: 100%;
+  height: 100px;
+  position: relative;
+}
+.navi,
+.infoi {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.infoi {
+  z-index: 10;
+}
+.settings-header {
+    background-color:#ffffff;
+    color:
+    
+}
+
+.list .youraccount-list .item
+{
+border-top: 0px;
+border-left: 0px;
+border-right: 0px;
+border-bottom: 0px;
+}
+.youraccount-list .item-note {
+color:#000000;
+font-weight:bold
+}

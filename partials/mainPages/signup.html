@@ -1,0 +1,45 @@
+<ion-view view-title="MonkeyVPN" class="content-background-color" hide-back-button="true">
+    <ion-nav-title>
+        <div class="title page-title" >
+            <div class="title text-center monkey-vpn-title">monkey<b>vpn</b><span class="tm-symbol light-grey-text">&trade;<span></div>
+        </div>
+    </ion-nav-title>
+    <ion-content class="padding" has-bouncing="false">
+        <form class="registration_form" name="signupForm" ng-submit="signup(credentials)" novalidate>
+            <div class="loginCon input-center">
+                <img src="img/monkey.png" class="img-center">
+                <div class="topLabelText text-center">Signup for free VPN</div>
+                <div class="list input-width input-center border-grey-rounded">
+                    <label class="item item-input button-rounded">
+                        <input required ng-model="credentials.email" name="email" type="text" placeholder="Email" class="monkey-input" ng-pattern="email" >
+                    </label>
+                </div>
+                <div class="list input-width input-center border-grey-rounded">
+                    <label class="item item-input button-rounded ">
+                        <input required ng-model="credentials.password" name="password" type="password" placeholder="Password" class="monkey-input" ng-pattern="password">
+                    </label>
+                </div>
+                <div class=" text-center">
+                    <input class="button button-rounded monkey-button-balanced input-width signup-now" type="submit" value="Signup Now"/>
+                </div>
+            </div>
+        </form>
+        <div class="socialnetAcct text-center" >
+            <div class="button button-clear"ng-click="goToLogin()">
+                <b class="already-have">Already have a monkeyvpn.com account?</b>
+            </div>
+            <div class="labelText">Or continue with...</div>
+            <div class="row soc-button-width">
+                <button class="button monkey-button-positive icon-left ion-social-facebook button-rounded col" ng-click="facebookSignIn()">
+                    Facebook
+                </button>
+                <button class="button monkey-button-google icon-left ion-social-google button-rounded col col-offset-5" ng-click="googleSignIn()">
+                    Google
+                </button>
+                <div id="fb-root"></div>
+            </div>
+        </div>
+    </ion-content>
+        <span class="skip-label button button-clear" ng-click="skipSignUp()">skip</span>
+</ion-view>
+
